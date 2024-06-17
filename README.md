@@ -24,8 +24,7 @@ If you encounter any issues or have any questions, feel free to open an issue. W
 
 ## License 📄
 
-This project is licensed under the MLT License - see the LICENSE.md file for details.
-
+This project is licensed under the MPL 2.0  License - see the LICENSE.md file for details.
 ## Acknowledgments 🙏
 
 - Hat tip to anyone whose code was used
