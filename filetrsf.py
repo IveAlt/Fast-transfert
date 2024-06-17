@@ -16,9 +16,9 @@ if is_admin():
     user = sys.argv[2]
     user2 = sys.argv[3]
     IP2 = sys.argv[4]
-    Bureau = bool(int(sys.argv[5]))
+    Desktop = bool(int(sys.argv[5]))
     Documents = bool(int(sys.argv[6]))
-    Téléchargement = bool(int(sys.argv[7]))
+    Downloads = bool(int(sys.argv[7]))
 
     pathdesktop = f"\\\\{IP1}\\C$\\Users\\{user}\\Desktop"
     pathdocuments = f"\\\\{IP1}\\C$\\Users\\{user}\\Documents"
@@ -29,11 +29,11 @@ if is_admin():
     dest_downloads = f"\\\\{IP2}\\C$\\Users\\{user2}\\Downloads"
 
     try:
-        if os.path.exists(pathdesktop) and Bureau:
+        if os.path.exists(pathdesktop) and Desktop:
             subprocess.call(['robocopy', pathdesktop, dest_desktop, '/E', '/MT:6', '/XO'])
         if os.path.exists(pathdocuments) and Documents:
             subprocess.call(['robocopy', pathdocuments, dest_documents, '/E', '/MT:6', '/XO'])
-        if os.path.exists(pathdownloads) and Téléchargement:
+        if os.path.exists(pathdownloads) and Downloads:
             subprocess.call(['robocopy', pathdownloads, dest_downloads, '/E', '/MT:6', '/XO'])
 
         print("Transfer Complete")
